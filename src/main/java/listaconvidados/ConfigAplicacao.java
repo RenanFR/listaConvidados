@@ -20,11 +20,6 @@ public class ConfigAplicacao {
 		dataSource.setUrl("jdbc:mysql://localhost:3306/boot");
 		dataSource.setUsername("root"); 
 		dataSource.setPassword("root");
-//		Properties properties = new Properties();
-//		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-//		properties.setProperty("hibernate.show_sql", "true");
-//		properties.setProperty("hibernate.hbm2ddl.auto", "update");
-//		dataSource.setConnectionProperties(properties);
 		return dataSource;
 	}
 }
