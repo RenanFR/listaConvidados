@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head xmlns:th="http://www.thymeleaf.org"  >
+<meta charset="UTF-8"	/>
+	<title>Convidados</title>
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<table>
+		<caption>Lista de convidados</caption>
+		<thead>
+			<tr>
+				<th>Nome</th>			
+				<th>E-mail</th>			
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="c : ${allConvidados}">
+				<td><span th:text="${c.nomeConvidado}"></span></td>
+				<td><span th:text="${c.emailConvidado}"></span></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<form action="adicionarConvidado" method="post">
+		<label id="labelConvidadoid">Identificação:</label>
+			<input type="number" name="convidadoid"	/><br	/>
+		<label id="labelNome">Nome:</label>
+			<input type="text" name="nome"	/><br	/>
+		<label id="labelEmail">E-mail:</label>
+			<input type="text" name="email"	/> <br	/>
+		<input type="submit"	value="Incluir na lista"/>
+	</form>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
