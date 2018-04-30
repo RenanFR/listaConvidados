@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import listaconvidados.pojo.Convidado;
 import listaconvidados.service.ConvidadosService;
 import renan.academico.enviadoremail.service.EnviadorEmailService;
+
 @Controller//Convertendo a classe de configuração em controladora para testar
 public class ConvidadosController {
 	@Autowired
